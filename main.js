@@ -16,7 +16,7 @@ recognition.onresult = function(event){
 
     document.getElementById("textbox").innerHTML = Content;
     console.log(Content);
-if (Content == "My selfie"){
+if (Content == "my selfie"){
 console.log("taking selfie....");
 speak();
 }
@@ -42,14 +42,14 @@ function take_snapshot()
 {
 Webcam.snap(function(data_uri) {
 
-    document.getElementById("result").innerHTML = '<img id="selfie_image" src="'+ data_uri+'"/>';
+    document.getElementById("result").innerHTML = '<img id="selfie_image" src="'+data_uri+'">';
 });
 }
 
 function save()
 {
 link = document.getElementById("link");
-image = document.getElementById("selfie_image").src;
+image = document.getElementById("selfie_image").src ;
 link.href = image;
 link.click();
 }
